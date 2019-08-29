@@ -25,6 +25,7 @@ app.post('/activate',function (req,res) {
 
     var value = req.body.value;
     var phone = req.body.phone;
+    if(phone.length>5){
     client.query('UPDATE users set active=1 , wallet ='+value+' WHERE phone = '+phone, function (error, results, fields) {
         if (error) {
             client.end();
@@ -36,9 +37,9 @@ app.post('/activate',function (req,res) {
 
         };
 
-    });
-
-})
+    }   );
+    }
+});
 
 
     
