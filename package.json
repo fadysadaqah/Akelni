@@ -1,0 +1,28 @@
+{
+  "name": "akelni",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1",
+    "body-parser": "^1.19.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fadysadaqah/Akelni.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fadysadaqah/Akelni/issues"
+  },
+  "homepage": "https://github.com/fadysadaqah/Akelni#readme",
+  "description": ""
+}
+
