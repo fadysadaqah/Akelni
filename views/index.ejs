@@ -1,0 +1,27 @@
+<Style>
+div{
+    max-width: 500px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+input{
+    width: 100%
+}
+
+</Style>
+<DIV>
+
+    <form action="/activate" method="POST">
+        <%=JSON.stringify(msg)%>
+        <br>
+        <br>
+        <input type="text" name="phone" placeholder="phone">
+        <br>
+        <br>
+        <input type="text" name="value" placeholder="value to recharge">
+        <br>
+        <br>
+        <button type="submit">Activate</button>
+    </form>
+</DIV>
