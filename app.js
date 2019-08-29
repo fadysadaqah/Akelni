@@ -6,6 +6,8 @@ var bodyParser = require('body-parser');
 app.set('view engine','ejs')
 app.use(bodyParser.urlencoded({extended:false}));
 var mysql = require('mysql');
+const PORT = process.env.PORT || 5000;
+
 var client = mysql.createConnection({
     host: 'akelnicluster.cluster-c4nltsrd8r4d.us-west-2.rds.amazonaws.com',
     user: 'samy',
@@ -42,4 +44,4 @@ app.post('/activate',function (req,res) {
 
 
     
-app.listen(5000)
+app.listen(PORT)
