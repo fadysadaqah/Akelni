@@ -38,6 +38,9 @@ app.post('/activate',function (req,res) {
         };
 
     }   );
+    }else{
+        client.end();
+        res.send('phone<5')
     }
 });
 
