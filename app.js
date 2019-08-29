@@ -12,6 +12,7 @@ var client = mysql.createConnection({
     password: '=f,N48~rwJqH',
     database: 'akelni_main'
 });
+client.connect();
 
 
 
@@ -21,17 +22,14 @@ app.get('/',function (req,res) {
     
 })
 app.post('/activate',function (req,res) {
-    client.connect();
 
     var value = req.body.value;
     var phone = req.body.phone;
     if(phone.length>5){
     client.query('UPDATE users set active=1 , wallet ='+value+' WHERE phone = '+phone, function (error, results, fields) {
         if (error) {
-            client.end();
             res.render('index', { msg: error });
         } else {
-            client.end();
             res.render('index', { msg: results });
 
 
@@ -39,7 +37,6 @@ app.post('/activate',function (req,res) {
 
     }   );
     }else{
-        client.end();
         res.send('phone<5')
     }
 });
